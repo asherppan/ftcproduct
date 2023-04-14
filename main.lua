@@ -4,6 +4,8 @@ local PathfindingService = game:GetService("PathfindingService");
 local TweenService = game:GetService("TweenService")
 local ServerStorage = game:GetService("ServerStorage")
 
+-- getting service to find available paths
+
 -- [[ Variables ]] --
 
 local Robot1 = script.Parent;
@@ -30,6 +32,8 @@ local function pathFollow(destination)
 		end;
 	end
 end;
+
+--loops through existing objects for robot to navigate
 
 
 
@@ -67,5 +71,7 @@ if not workspace.R1Folder:FindFirstChild("R1Part5") then
 		newCone.Position = Vector3.new(destination.Position.X, destination.Position.Y + val  , destination.Position.Z);
 	end;
 end;
+
+-- finds cones, and stacks them back when desired amount of cones is met.
 
 
